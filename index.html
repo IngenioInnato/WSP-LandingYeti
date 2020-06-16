@@ -5,13 +5,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yeti Plan | World Solar Pro</title>
+  <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/menu.css">
 </head>
 
 <body>
   <div class="layout" id="app">
-    <header>
-      <nav></nav>
+    <header id="header">
+      <nav>
+        <ul class="menu">
+          <li class="menu__list logo">
+            <a href="#header">
+              <picture>
+                <source srcset="./img/logo/logo-dark.webp" alt="World Solar Pro Logo" class="" type="image/webp">
+                <img src="./img/logo/logo-dark.png" alt="World Solar Pro Logo" class="">
+              </picture>
+            </a>
+          </li>
+          <li class="menu__list"><a href="#header">Inicio</a></li>
+          <li class="menu__list"><a href="#">Planes</a></li>
+          <li class="menu__list"><a href="#">Test</a></li>
+          <li class="menu__list"><a href="#">Conectate</a></li>
+          <li class="menu__list"><a href="#">Redes Sociales</a></li>
+        </ul>
+      </nav>
     </header>
   </div>
 

@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Avenir';
+  src: local('Avenir'), local('Avenir'), url('../font/avenir/regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 700, 800, 900, 1000;
+  src: local('Avenir'), local('Avenir'), url('../font/avenir/bold.woff') format('woff');
+  font-display: swap;
+}
+
+:root {
+  --black: #08090A;
+  --white: #ffffff;
+  --grey: #373737;
+  --light_blue: #124FA0;
+  --dark_blue: #18283F;
+  --yellow: #F6EA03;
+  --font_family: 'Avenir';
+}
+
+* {
+  font-family: 'Avenir', sans-serif;
+}
+
+
 /* Display */
 
 .d-grid {
