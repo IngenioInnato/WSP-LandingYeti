@@ -1,0 +1,205 @@
+@charset "UTF-8";
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap'); */
+@font-face {
+      font-family: 'RoosW01Display';
+      src: local('RoosW01Display'), local('RoosW01Display'), url('../../resources/font/RoosW01Display/RoosW01Display.woff') format('woff');
+      src: 
+      url('../../resources/font/RoosW01Display/RoosW01Display.eot') format('embedded-opentype'),
+      url('../../resources/font/RoosW01Display/RoosW01Display.woff2') format('woff2'),
+      url('../../resources/font/RoosW01Display/RoosW01Display.ttf') format('truetype'),
+      url('../../resources/font/RoosW01Display/RoosW01Display.svg') format('svg');
+      font-display: swap;
+}
+/* <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"> */
+:root{
+    --blue:             #0067A3;/* hsl(202, 100%, 32%) */
+    --orange:           #F88E2A; /* hsl(29, 94%, 57%) */
+    --green:            #B4D336; /* hsl(72, 64%, 52%) */
+    --gray:             #B3B3B3; /* hsl(0, 0%, 70%) */
+    --darkgray:         #4D4D4D;/* hsl(0, 0%, 30%) */
+    --black:            #000000; /* hsl(0,0%,0%) */
+    --white:            #ffffff; /* hsl(0, 0%, 100%) */
+
+    --font-family:      'RoosW01Display', serif;
+    --font-display:      calc(2.2rem + 0.2vw);
+    --font-h1:           calc(2rem + 0.2vw);
+    --font-h2:           calc(1.8rem + 0.2vw);
+    --font-h3:           calc(1.6rem + 0.2vw);
+    --font-h4:           calc(1.4rem + 0.2vw);
+    --font-h5:           calc(1.2rem + 0.2vw);
+    --font-h6:           calc(1rem + 0.2vw);
+    --font-p:            calc(1rem + 0.2vw);
+
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}
+
+
+html, body{
+    scroll-behavior:     smooth;
+    list-style-position: inside;
+    font-family:         var(--font-family);
+    overflow-x:          hidden;
+}
+.display{
+    font-size:          var(--font-display);
+    line-height:        calc(var(--font-display) + 0.2vw);
+    font-weight:        bold;
+    text-transform:     uppercase;
+
+}
+h1, .h1{
+    font-size:          var(--font-h1);
+    color:              var(--black);
+    font-weight:        bold !important;
+    line-height:        calc(var(--font-h1) + 0.2vw);
+    padding-bottom:     calc(var(--font-h1) + 0.2vw);
+    font-weight:        bold;
+    text-transform:     uppercase;
+}
+h2, .h2{
+    font-size:          var(--font-h2);
+    color:              var(--black);
+    font-weight:        bold !important;
+    padding-bottom:     calc(var(--font-h2) + 0.2vw);
+    line-height:        calc(var(--font-h2) + 0.2vw);
+    font-weight:        bold;
+    text-transform:     uppercase;
+}
+h3, .h3{ 
+    font-size:          var(--font-h3);
+    color:              var(--black);
+    font-weight:        bold !important;
+    padding-bottom:     calc(var(--font-h3) + 0.2vw);
+    line-height:        calc(var(--font-h3) + 0.2vw);
+    font-weight:        bold;
+    text-transform:     uppercase;
+}
+h4, .h4{ 
+    font-size:          var(--font-h4);
+    color:              var(--black);
+    font-weight:        bold !important;
+    padding-bottom:     calc(var(--font-h4) + 0.2vw);
+    line-height:        calc(var(--font-h4) + 0.2vw);
+    font-weight:        bold;
+    text-transform:     uppercase;
+}
+h5, .h5{ 
+    font-size:          var(--font-h5);
+    color:              var(--black);
+    font-weight:        bold !important;
+    padding-bottom:     calc(var(--font-h5) + 0.2vw);
+    line-height:        calc(var(--font-h5) + 0.2vw);
+    font-weight:        bold;
+    text-transform:     uppercase;
+}
+h6, .h6{ 
+    font-size:          var(--font-h6);
+    color:              var(--black);
+    font-weight:        bold !important;
+    padding-bottom:     calc(var(--font-h6) + 0.2vw);
+    line-height:        calc(var(--font-h6) + 0.2vw);
+    font-weight:        bold;
+    text-transform:     uppercase;
+}
+p, .p, a{
+  font-size: var(--font-h5);
+  font-weight: bold;
+  color: var(--darkgray);
+  padding-bottom:     calc(var(--font-h5) + 0.2vw);
+  line-height:        calc(var(--font-h5) + 0.2vw);
+}
+a {
+  text-decoration: none !important;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+a:hover{
+  color: var(--orange);
+}
+html, body, div, section,span, blockquote, pre, a, b, u, i, center, dl, dt, dd, ol, ul, li, button {
+    font-size:          var(--font-p);
+    line-height:        calc(var(--font-p) + 0.2vw);
+}
+.vh-100{
+  height: 100vh;
+  border: solid 1px var(--black);
+}
+.text-light{
+  color: var(--white);
+}
+.last-sub-item{
+  padding-bottom: 0;
+}
+
+.btn-wsp {
+  display: -webkit-inline-box;
+  display: inline-flex;
+  /* margin: 0 0 0.5rem 0 !important; */
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  background: var(--orange);
+  border: 1px solid var(--orange);
+  color: var(--white);
+  margin-bottom: 1vw;
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: var(--font-h5);
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+  text-transform: uppercase;
+}
+
+.btn-wsp:hover{
+  color: var(--darkgray);
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid var(--orange);
+  text-decoration: none;
+}
+footer .btn-wsp:hover{
+  color: var(--white);
+}
+.bg-darkgray{
+  background-color: var(--darkgray);
+}
+.bg-gray{
+  background-color: var(--gray);
+}
+.bg-blue{
+  background: var(--blue);
+}
+/* 
+@media (max-width: 575.98px) {  }
+@media (max-width: 767.98px) {  }
+@media (max-width: 991.98px) {  }
+@media (max-width: 1199.98px){  }
+@media (min-width: 1200px)   {  } 
+*/
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+.text-shadow{
+  text-shadow: 5px 5px 5px var(--black) !important;
+}
+
+.Arrange-sizeFit {
+  font-family: 'RoosW01Display', serif !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+}

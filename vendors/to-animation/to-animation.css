@@ -1,0 +1,121 @@
+@-webkit-keyframes to-black{
+  to {background-color: var(--black);}
+}
+@keyframes to-black{
+  to {background-color: var(--black);}
+}
+@-webkit-keyframes to-blue{
+  to {background-color: var(--blue);}
+}
+@keyframes to-blue{
+  to {background-color: var(--blue);}
+}
+@-webkit-keyframes to-orange{
+  to {background-color: var(--yellow);}
+}
+@keyframes to-orange{
+  to {background-color: var(--yellow);}
+}
+@keyframes to-orange{
+  to {background-color: var(--orange);}
+}
+@-webkit-keyframes to-gray{
+  to {background-color: var(--gray);}
+}
+@keyframes to-gray{
+  to {background-color: var(--gray);}
+}
+@-webkit-keyframes to-white{
+  to {background-color: var(--white);}
+}
+@keyframes to-white{
+  to {background-color: var(--white);}
+}
+
+@-webkit-keyframes to-left {
+  from{
+    -webkit-transform: translateX(-25px);
+            transform: translateX(-25px);
+  }   
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }   
+}
+
+@keyframes to-left {
+  from{
+    -webkit-transform: translateX(-25px);
+            transform: translateX(-25px);
+  }   
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }   
+}
+
+@-webkit-keyframes to-right {
+  from{
+    -webkit-transform: translateX(25px);
+            transform: translateX(25px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes to-right {
+  from{
+    -webkit-transform: translateX(25px);
+            transform: translateX(25px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes to-top {
+  from{
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }   
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }   
+}
+
+@keyframes to-top {
+  from{
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }   
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }   
+}
+
+@-webkit-keyframes to-bottom {
+  from{
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes to-bottom {
+  from{
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
