@@ -1,5 +1,45 @@
-  header {
-    padding: 2rem;
-    border: 1px solid var(--black);
-  }
-  /* https://www.youtube.com/watch?v=mbDNrvKLAGM */
+/* header {
+  border-bottom: 1px solid var(--grey);
+  width: 100%;
+}
+
+nav>ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+  width: 100%;
+}
+
+.menu__list {
+  width: auto;
+}
+
+#menu__logo {
+  flex: 1;
+}
+
+#menu__logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+.menu__list>a {
+  color: var(--light_blue);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+*/
+
+
+/* https://www.youtube.com/watch?v=mbDNrvKLAGM */
+
+
+/* https://codepen.io/tutsplus/pen/bGVPVrY */
+
+
+/*https: //webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535 */

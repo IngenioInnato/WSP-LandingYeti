@@ -18,11 +18,22 @@
   --light_blue: #124FA0;
   --dark_blue: #18283F;
   --yellow: #F6EA03;
-  --font_family: 'Avenir';
+  --font_family: 'Avenir', sans-serif;
 }
 
 * {
-  font-family: 'Avenir', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  box-sizing: border-box;
+  font-family: var(--font_family);
+  color: var(--black);
+  scroll-behavior: smooth;
+}
+
+.layout {
+  display: grid;
+  width: 100%;
 }
 
 
@@ -46,3 +57,41 @@
 
 
 /* ======= */
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Margin && Padding */
+
+.pt-4,
+.py-4 {
+  padding-top: 1.5rem!important;
+}
+
+.pt-5,
+.py-5 {
+  padding-top: 3rem!important;
+}
+
+.pb-5,
+.py-5 {
+  padding-bottom: 3rem;
+}
+
+.mt-4,
+.my-4 {
+  margin-top: 1.5rem!important;
+}
+
+.mt-5,
+.my-5 {
+  margin-top: 3rem!important;
+}
+
+.mb-5,
+.my-5 {
+  margin-bottom: 3rem;
+}
