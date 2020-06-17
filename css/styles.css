@@ -68,12 +68,12 @@
 
 .pt-4,
 .py-4 {
-  padding-top: 1.5rem!important;
+  padding-top: 1.5rem;
 }
 
 .pt-5,
 .py-5 {
-  padding-top: 3rem!important;
+  padding-top: 3rem;
 }
 
 .pb-5,
@@ -83,12 +83,12 @@
 
 .mt-4,
 .my-4 {
-  margin-top: 1.5rem!important;
+  margin-top: 1.5rem;
 }
 
 .mt-5,
 .my-5 {
-  margin-top: 3rem!important;
+  margin-top: 3rem;
 }
 
 .mb-5,
