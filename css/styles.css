@@ -1,3 +1,15 @@
+/* BreakPoints 
+@media (max-width: 575.98px) { ... }
+@media (max-width: 767.98px) { ... }
+@media (max-width: 991.98px) { ... }
+@media (max-width: 1199.98px) { ... }
+
+@media (min-width: 576px) { ... }
+@media (min-width: 768px) { ... }
+@media (min-width: 992px) { ... }
+@media (min-width: 1200px) { ... }
+*/
+
 @font-face {
   font-family: 'Avenir';
   src: local('Avenir'), local('Avenir'), url('../font/avenir/regular.woff') format('woff');
@@ -6,9 +18,8 @@
 
 @font-face {
   font-family: 'Avenir';
-  font-weight: 700, 800, 900, 1000;
-  src: local('Avenir'), local('Avenir'), url('../font/avenir/bold.woff') format('woff');
-  font-display: swap;
+  font-weight: 800;
+  src: local('Avenir Bold'), local('Avenir Bold'), url('../font/avenir/bold.woff') format('woff');
 }
 
 :root {
@@ -19,6 +30,10 @@
   --dark_blue: #18283F;
   --yellow: #F6EA03;
   --font_family: 'Avenir', sans-serif;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
 }
 
 * {
@@ -31,67 +46,231 @@
   scroll-behavior: smooth;
 }
 
+
+/* Layout */
+
 .layout {
   display: grid;
+  gap: 3rem;
+  grid-template-areas: "header" "inicio" "liberate" "planes" "contador" "testimonios" "produce" "suscribete" "conectate" "footer";
   width: 100%;
 }
 
 
-/* Display */
+/* ====== */
 
-.d-grid {
-  display: grid;
+
+/* Header: Header */
+
+header {
+  grid-area: header;
 }
 
-.d-flex {
+
+/* ========== */
+
+
+/* S1: Inicio */
+
+#S1 {
+  display: flex;
+  padding: 3rem;
+  justify-content: center;
+  grid-area: inicio;
+}
+
+.S1__col--2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.S1__form,
+.contacto__input {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto {
+  /* border: 1px solid var(--grey); */
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.contacto__title {
+  background-color: var(--dark_blue);
+  border-radius: 10px 10px 0 0;
+  padding: 3rem;
+}
+
+.contacto__title h2 {
+  color: white;
+}
+
+.contacto__input {
+  padding: 3rem;
+}
+
+form input,
+form textarea {
+  margin-bottom: 0.5rem;
+  max-width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--grey);
+  color: var(--grey);
+  font-size: 1em;
+  border-radius: 20px;
+  transition: all 0.6s ease-in-out;
+}
+
+form button,
+form input[type="submit"],
+button {
+  display: block;
+  background-color: var(--light_blue);
+  padding: 1rem;
+  border: 0;
+  font-size: 1em;
+  color: var(--white);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--gray);
+}
+
+
+/* ========== */
+
+
+/* S2: Libérate */
+
+#S2 {
+  grid-area: liberate;
+  background: url(../img/liberate.jpg) no-repeat center center / cover;
+  padding: 5rem 3rem;
+}
+
+#S2 h2 {
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  color: var(--white);
+  text-align: center;
+}
+
+
+/* ============ */
+
+
+/* S3: Planes */
+
+#S3 {
+  grid-area: planes;
+}
+
+
+/* ========== */
+
+
+/* S4: Contador */
+
+#S4 {
+  grid-area: contador;
+  padding: 5rem 0;
+}
+
+
+/* ============ */
+
+
+/* S5: Testimonios */
+
+#S5 {
+  grid-area: testimonios;
+  display: grid;
+  gap: 3rem;
+  grid-template-areas: "titulo titulo titulo" "col-1 col-2 col-3";
+  padding: 0 3rem;
+}
+
+.S5__titulo {
+  grid-area: titulo;
+}
+
+
+/* =============== */
+
+
+/* S6: Produce */
+
+#S6 {
+  grid-area: produce;
+  background: url(../img/produzco.jpg) no-repeat center center / cover;
+  padding: 5rem 3rem;
   display: flex;
 }
 
-.d-block {
-  display: block;
-}
-
-.d-none {
-  display: none;
-}
-
-
-/* ======= */
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
+#S6 h2 {
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  color: var(--white);
+  text-align: center;
 }
 
 
-/* Margin && Padding */
+/* =========== */
 
-.pt-4,
-.py-4 {
-  padding-top: 1.5rem;
+
+/* S7: Suscribete */
+
+#S7 {
+  grid-area: suscribete;
+  display: flex;
+  justify-content: center;
 }
 
-.pt-5,
-.py-5 {
-  padding-top: 3rem;
+
+/* ============== */
+
+
+/* S8: Conéctate */
+
+#S8 {
+  grid-area: conectate;
+  display: grid;
+  gap: 3rem;
+  grid-template-areas: "titulo titulo" "telefono ventilador" "televisor nevera";
 }
 
-.pb-5,
-.py-5 {
-  padding-bottom: 3rem;
+.S8__title {
+  grid-area: titulo;
 }
 
-.mt-4,
-.my-4 {
-  margin-top: 1.5rem;
+.S8__telefono {
+  grid-area: telefono;
 }
 
-.mt-5,
-.my-5 {
-  margin-top: 3rem;
+.S8__ventilador {
+  grid-area: ventilador;
 }
 
-.mb-5,
-.my-5 {
-  margin-bottom: 3rem;
+.S8__televisor {
+  grid-area: televisor;
 }
+
+.S8__nevera {
+  grid-area: nevera;
+}
+
+
+/* ============= */
+
+
+/* Footer */
+
+footer {
+  grid-area: footer;
+}
+
+
+/* ====== */

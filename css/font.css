@@ -1,0 +1,115 @@
+/* 
+    --font-display:      calc(2.2rem + 0.2vw);
+    --font-h1:           calc(2rem + 0.2vw);
+    --font-h2:           calc(1.8rem + 0.2vw);
+    --font-h3:           calc(1.6rem + 0.2vw);
+    --font-h4:           calc(1.4rem + 0.2vw);
+    --font-h5:           calc(1.2rem + 0.2vw);
+    --font-h6:           calc(1rem + 0.2vw);
+    --font-p:            calc(1rem + 0.2vw);
+*/
+
+.display,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p,
+.p,
+span,
+small,
+b,
+strong,
+label {
+  padding: 0;
+  margin: 0;
+}
+
+.display-1 {
+  font-size: calc(3.5rem + 2vw);
+  font-weight: 800;
+}
+
+.display-2 {
+  font-size: calc(3.3rem + 2vw);
+  font-weight: 800;
+}
+
+.display-3 {
+  font-size: calc(3rem + 2vw);
+  font-weight: 800;
+}
+
+.display-4 {
+  font-size: calc(2.8rem + 2vw);
+  font-weight: 800;
+}
+
+.display-5 {
+  font-size: calc(2.6rem + 2vw);
+  font-weight: 800;
+}
+
+h1,
+.h1 {
+  font-size: calc(2.4rem + 2vw);
+  font-weight: 800;
+}
+
+h2,
+.h2 {
+  font-size: calc(2rem + 2vw);
+}
+
+h3,
+.h3 {
+  font-size: calc(1.4rem + 2vw);
+}
+
+h4,
+.h4 {
+  font-size: calc(1.2rem + 2vw);
+}
+
+h5,
+.h5 {
+  font-size: calc(1rem + 2vw);
+}
+
+h6,
+.h6 {
+  font-size: calc(0.8rem + 2vw);
+}
+
+p,
+.p,
+small,
+label {
+  color: var(--grey);
+}
+
+p,
+.p {
+  font-size: calc(0.2rem + 2vw);
+}
+
+small,
+a {
+  font-size: calc(0.1rem + 1.2vw);
+}
+
+a {
+  color: var(--light_blue);
+  text-decoration: none;
+}
+
+
+/* Tabs https://renatello.com/vue-js-tabs/ */

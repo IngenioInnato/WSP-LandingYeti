@@ -1,45 +1,114 @@
-/* header {
-  border-bottom: 1px solid var(--grey);
+header {
   width: 100%;
+  position: fixed;
+  background-color: var(--white);
+  /* border-bottom: 1px solid var(--grey);
+   */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
-nav>ul {
+#menu {
+  display: grid;
+  grid-template-areas: "logo anclas";
+  align-items: center;
+  gap: 3rem;
+  padding: 0 3rem;
+}
+
+
+/* Menu Logo */
+
+.menu__logo {
+  grid-area: logo;
+}
+
+.menu__logo img,
+.menu__logo picture,
+.menu__logo source {
+  max-width: 150px;
+}
+
+
+/* ========= */
+
+
+/* Menu Anclas */
+
+.menu__anchor {
+  grid-area: anclas;
+}
+
+.menu__anchor>ul {
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   list-style: none;
-  align-items: center;
-  justify-content: center;
-  padding: 0 4rem;
-  width: 100%;
 }
 
-.menu__list {
-  width: auto;
-}
-
-#menu__logo {
-  flex: 1;
-}
-
-#menu__logo img {
-  max-width: 150px;
-  height: auto;
-}
-
-.menu__list>a {
-  color: var(--light_blue);
+.anchor__item>a {
   text-decoration: none;
+  color: var(--light_blue);
   text-align: center;
   cursor: pointer;
 }
 
-*/
+
+/* ========== */
 
 
-/* https://www.youtube.com/watch?v=mbDNrvKLAGM */
+/* Menu Burger */
+
+.menu__burger {
+  display: none;
+  /* display: block; */
+  cursor: pointer;
+}
+
+.menu__burger {
+  grid-area: burger;
+}
+
+.menu__burger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--grey);
+  margin: 5px auto;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.burger,
+.burger span {
+  display: block;
+  cursor: pointer;
+}
 
 
-/* https://codepen.io/tutsplus/pen/bGVPVrY */
+/* =========== */
 
-
-/*https: //webdesign.tutsplus.com/tutorials/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535 */
+@media (max-width: 1199.98px) {
+  #menu {
+    display: none;
+  }
+  /* #menu {
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-areas: "logo burger " "anclas anclas";
+  }
+  .menu__burger {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: burger;
+  }
+  .menu__anchor>ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .menu__anchor li {
+    width: 80%;
+    height: 30px;
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    margin: 0.2rem;
+    align-self: center;
+  } */
+}

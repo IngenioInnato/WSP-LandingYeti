@@ -8,7 +8,11 @@
   <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/menu.css">
-
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/tabs.css">
+  <!-- <link rel="stylesheet" href="./css/bundle.css"> -->
 
   <meta name="robots" content="index, follow">
   <link rel="shortcut icon" href="./img/logo/isotipo.png" type="image/png">
@@ -44,7 +48,7 @@
     <header id="header">
       <nav id="menu">
         <div class="menu__logo">
-          <a href="#header">
+          <a href="#S1">
             <picture>
               <source srcset="./img/logo/logo-dark.webp" alt="World Solar Pro Logo" class="" type="image/webp">
               <img src="./img/logo/logo-dark.png" alt="World Solar Pro Logo" class="">
@@ -53,68 +57,211 @@
         </div>
         <div class="menu__anchor">
           <ul class="anchor">
-            <li class="anchor__item"><a href="#header">Inicio</a></li>
+            <li class="anchor__item"><a href="#S1">Inicio</a></li>
             <li class="anchor__item"><a href="#S3">Planes</a></li>
             <li class="anchor__item"><a href="#S5">Testimonios</a></li>
             <li class="anchor__item"><a href="#S8">Conéctate</a></li>
-            <li class="anchor__item"><a href="footer">Redes Sociales</a></li>
+            <li class="anchor__item"><a href="#footer">Redes Sociales</a></li>
           </ul>
         </div>
         <div class="menu__burger" id="mobile-burger">
-          <span></span>
-          <span></span>
-          <span></span>
+          <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </nav>
     </header>
     <section id="S1">
-      <div class="S1__col col--1">
+      <div class="S1__col S1__col--1">
         <picture>
           <source srcset="./img/yeti.webp" type="image/webp" alt="yeti battery">
           <img src="./img/yeti.jpg" alt="yeti battery">
         </picture>
       </div>
-      <div class="S1__col col--2">
+      <div class="S1__col S1__col--2">
+        <form class="S1__form contacto">
+          <div class="contacto__title">
+            <h2 class="text-center">¡Reserva ahora!</h2>
+          </div>
+          <div class="contacto__input">
+            <input type="text" value="Nombre">
+            <input type="text" value="Teléfono">
+            <input type="text" value="Email">
+            <input type="submit" value="¡Contáctanos!">
+          </div>
+        </form>
       </div>
     </section>
     <section id="S2">
-      <h2 class="display"></h2>
+      <h2 class="display-1">¡Libérate de tu proveedor de energía! </h2>
     </section>
     <section id="S3">
-      <div id="tab"></div>
+      <div id="tab">
+        <!-- <div class="tab__header"> -->
+        <ul class="tab__header--menu">
+          <li class="tab_header--item tab__item tab__item--active">Plan 1</li>
+          <li class="tab_header--item tab__item">Plan 2</li>
+        </ul>
+        <div class="tab__body">
+          <div class="tab__body--col tab__body--col-1">
+            <ul class="tab__check">
+              <li>
+                <h2><span class="text-light_blue">1</span> Batería de lítio Goal Yeti</h2>
+              </li>
+              <li>
+                <h2><span class="text-light_blue">2</span> Placas Solares Boulden 100</h2>
+              </li>
+            </ul>
+            <p class="py-5">Financiamiento por 36 meses</p>
+            <button class="w-100"><a href="#S1"><h6 class="text-white">¡Reserva tu plan ahora!</h6></a></button>
+          </div>
+          <div class="tab__body--col tab__body--col-2 text-center">
+            <picture>
+              <source srcset="./img/panel-yeti.webp" type="image/webp" class="img-fluid" alt="Panel y Yeti">
+              <img src="./img/panel-yeti.jpg" alt="Panel y Yeti" class="img-fluid">
+            </picture>
+            <h2 class="h1">$92.61</h2>
+            <h6 class="text-dark_blue">Mensuales</h6>
+          </div>
+        </div>
+      </div>
     </section>
-    <section id="S4">
-      <div id="contador"></div>
+    <section id="S4" class="bg-dark_blue">
+      <div id="contador" class="d-flex justify-content-around">
+        <div class="bg-white text-center p-5 border-rounded flex-1">
+          <h2>30</h2>
+          <h6 class="text-dark_blue">Días</h6>
+        </div>
+        <div class="bg-white text-center p-5 border-rounded flex-1">
+          <h2>10</h2>
+          <h6 class="text-dark_blue">Horas</h6>
+        </div>
+        <div class="bg-white text-center p-5 border-rounded flex-1">
+          <h2>20</h2>
+          <h6 class="text-dark_blue">Minutos</h6>
+        </div>
+        <div class="bg-white text-center p-5 border-rounded flex-1">
+          <h2>30</h2>
+          <h6 class="text-dark_blue">Segundos</h6>
+        </div>
+      </div>
     </section>
     <section id="S5">
-      <div id="testimonios"></div>
+      <h2 class="S5__titulo text-center">Testimonios</h2>
+      <div class="S5__col col--1 border-rounded p-5 text-center">
+        <picture>
+          <source srcset=" ./img/testimonio/sofia-torres.webp " type="image/webp " alt="Sofia Torres " class="rounded-circle">
+          <img src="./img/testimonio/sofia-torres.jpg " alt="Sofia Torres " class="rounded-circle">
+        </picture>
+        <h6 class="text-light_blue py-3">Sofía<br>Torres</h6>
+        <p>Siento que hice una buena compra. Durante la temporada de huracanes podré conectar los aparatos básicos en mi hogar.</p>
+      </div>
+      <div class="S5__col col--2 border-rounded p-5 text-center">
+        <picture>
+          <source srcset=" ./img/testimonio/angelica-castillo.webp " type="image/webp " alt="Sofia Torres " class="rounded-circle">
+          <img src="./img/testimonio/angelica-castillo.jpg " alt="Sofia Torres " class="rounded-circle">
+        </picture>
+        <h6 class="text-light_blue py-3">Angélica<br>Castillo</h6>
+        <p>Me siento muy cómoda tranquila con mi Goal Yeti. Ya no me preocupa que se vaya la luz.</p>
+      </div>
+      <div class="S5__col col--3 border-rounded p-5 text-center">
+        <picture>
+          <source srcset=" ./img/testimonio/fernando-rodriguez.webp " type="image/webp " alt="Sofia Torres " class="rounded-circle ">
+          <img src="./img/testimonio/fernando-rodriguez.jpg " alt="Sofia Torres " class="rounded-circle ">
+        </picture>
+        <h6 class="text-light_blue py-3 ">Fernando<br>Rodríguez</h6>
+        <p> ¡Es muy práctico! lo subo a mi camioneta y voy de camping con mis hijos.</p>
+      </div>
     </section>
     <section id="S6">
-      <h2 class="display"></h2>
+      <h2 class="display-1">¡Produce tu propia energía!</h2>
     </section>
     <section id="S7">
-      <div id="form"></div>
+      <form class="S1__form contacto">
+        <div class="contacto__title">
+          <h2 class="text-center">¡Reserva ahora!</h2>
+        </div>
+        <div class="contacto__input">
+          <input type="text" value="Nombre">
+          <input type="text" value="Teléfono">
+          <input type="text" value="Email">
+          <input type="submit" value="¡Contáctanos!">
+        </div>
+      </form>
     </section>
     <section id="S8">
-      <div id="conectate"></div>
+      <h2 class="S8__title h1 text-center text-light_blue">Conecta tus equipos</h2>
+      <div class="S8__item S8__item--1 S8__telefono text-center">
+        <picture>
+          <source srcset="" type="./img/icon/150-movil.webp" alt="Teléfono" class="img-fluid">
+          <img src="./img/icon/150-movil.jpg" alt="Teléfono" class="img-fluid">
+        </picture>
+        <h6 class="pt-3">70 Recargas</h6>
+      </div>
+      <div class="S8__item S8__item--2 S8__ventilador text-center">
+        <picture>
+          <source srcset="" type="./img/icon/150-ventilador.webp" alt="Ventilador" class="img-fluid">
+          <img src="./img/icon/150-ventilador.jpg" alt="Ventilador" class="img-fluid">
+        </picture>
+        <h6 class="pt-3">23 Horas</h6>
+      </div>
+      <div class="S8__item S8__item--3 S8__televisor text-center">
+        <picture>
+          <source srcset="" type="./img/icon/150-tele.webp" alt="Televisor" class="img-fluid">
+          <img src="./img/icon/150-tele.jpg" alt="Televisor" class="img-fluid">
+        </picture>
+        <h6 class="pt-3">14 Horas</h6>
+      </div>
+      <div class="S8__item S8__item--4 S8__nevera text-center">
+        <picture>
+          <source srcset="" type="./img/icon/150-nevera.webp" alt="Nevera" class="img-fluid">
+          <img src="./img/icon/150-nevera.jpg" alt="Nevera" class="img-fluid">
+        </picture>
+        <h6 class="pt-3">23 Horas</h6>
+      </div>
     </section>
     <aside>
       <div id="ws"></div>
     </aside>
-    <footer>
-      <div class="footer__copy">Derechos de autor</div>
-      <div class="footer__logo">
+    <footer id="footer ">
+      <div class="footer__copy ">
+        World Solar Pro LLC.
+        <script>
+          document.write(new Date().getFullYear())
+        </script><br>Todos los derechos resevados.</div>
+      <div class="footer__logo ">
         <picture>
-          <source srcset="./img/logo/logo-light.webp" alt="World Solar Pro Logo" class="" type="image/webp">
-          <img src="./img/logo/logo-light.png" alt="World Solar Pro Logo" class="">
+          <source srcset="./img/logo/logo-light.webp " alt="World Solar Pro Logo " class="img-fluid " type="image/webp ">
+          <img src="./img/logo/logo-light.png " alt="World Solar Pro Logo " class="img-fluid ">
         </picture>
       </div>
-      <div class="footer__rrss"></div>
+      <div class="footer__rrss ">
+        <a class="rrss--fb img-fluid " href="https://www.facebook.com/WorldSolarProHome/ " target="_blank ">
+          <picture>
+            <source srcset="./img/rrss/fb.webp " type="image/webp " alt="Facebook " title="Facebook " class="img-fluid ">
+            <img src="./img/rrss/fb.png " alt="Facebook " title="Facebook " class="img-fluid ">
+          </picture>
+        </a>
+        <a class="rrss--ig " href="https://www.instagram.com/worldsolarprohome/ " target="_blank ">
+          <picture>
+            <source srcset="./img/rrss/ig.webp " type="image/webp " alt="Instagram " title="Instagram " class="img-fluid ">
+            <img src="./img/rrss/ig.png " alt="Instagram " title="Instagram " class="img-fluid ">
+          </picture>
+        </a>
+        <a class="rrss--tw " href="https://www.instagram.com/worldsolarprohome/ " target="_blank ">
+          <picture>
+            <source srcset="./img/rrss/tw.webp " type="image/webp " alt="Twitter " title="Twitter " class="img-fluid ">
+            <img src="./img/rrss/tw.png " alt="Twitter " title="Twitter " class="img-fluid ">
+          </picture>
+        </a>
+      </div>
     </footer>
   </div>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script> -->
-  <script src="./node_modules/vue/dist/vue.min.js"></script>
-  <script src="./js/main.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11 "></script> -->
+  <script src="./node_modules/vue/dist/vue.min.js "></script>
+  <script src="./js/main.js "></script>
 </body>
 
 </html>

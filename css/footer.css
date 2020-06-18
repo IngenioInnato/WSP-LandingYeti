@@ -1,0 +1,36 @@
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "copy logo rrss";
+  background-color: var(--dark_blue);
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+  padding: 0 3rem;
+}
+
+.footer__copy {
+  grid-area: copy;
+  color: var(--white);
+}
+
+.footer__rrss {
+  grid-area: rrss;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__rrss img,
+.footer__rrss picture,
+.footer source {
+  width: auto;
+  max-height: 40px;
+}
+
+@media (max-width: 1199.98px) {
+  footer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "rrss" "logo" "copy";
+    padding: 3rem;
+  }
+}
