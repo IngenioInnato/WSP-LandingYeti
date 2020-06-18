@@ -209,7 +209,6 @@ form button:hover {
   grid-area: produce;
   background: url(../img/produzco.jpg) no-repeat center center / cover;
   padding: 5rem 3rem;
-  display: flex;
 }
 
 #S6 h2 {

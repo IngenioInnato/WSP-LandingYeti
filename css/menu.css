@@ -87,12 +87,13 @@ header {
 /* =========== */
 
 @media (max-width: 1199.98px) {
-  /* #menu {
-    display: none;
-  } */
   #menu {
+    display: none;
+  }
+  /* #menu {
     grid-template-columns: 1fr 1fr auto;
     grid-template-areas: "logo burger " "anclas anclas";
+    gap: 0;
   }
   .menu__burger {
     display: flex;
@@ -102,6 +103,7 @@ header {
   .menu__anchor>ul {
     flex-direction: column;
     text-align: center;
+    padding-bottom: 1rem;
   }
   .menu__anchor li {
     width: 80%;
@@ -110,5 +112,5 @@ header {
     border-radius: 5px;
     margin: 0.2rem;
     align-self: center;
-  }
+  } */
 }

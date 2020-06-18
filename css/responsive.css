@@ -10,7 +10,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0;
   }
   #S2 {
     flex-direction: column;
@@ -26,5 +25,18 @@
   .tab__body,
   #contador {
     flex-direction: column;
+  }
+  .contador__item{
+    margin-bottom: 3rem;
+  }
+  .contador__item:last-child{
+    margin-bottom:0 ;
+  }
+  #S5{
+    grid-template-areas: "titulo" "col-1" "col-2" "col-3";
+
+  }
+  #S8{
+    grid-template-areas: "titulo" "telefono" "ventilador" "televisor" "nevera"
   }
 }

@@ -66,7 +66,7 @@
           </ul>
         </div>
         <div class="menu__burger" id="mobile-burger">
-          <div class="burger">
+          <div class="burger border-rounded p-3">
             <span></span>
             <span></span>
             <span></span>
@@ -82,14 +82,14 @@
         </picture>
       </div>
       <div class="S1__col S1__col--2">
-        <form class="S1__form contacto">
+        <form class="S1__form contacto" @submit.prevent @submit="getDataForm()">
           <div class="contacto__title">
             <h2 class="text-center">¡Reserva ahora!</h2>
           </div>
           <div class="contacto__input">
-            <input type="text" value="Nombre">
-            <input type="text" value="Teléfono">
-            <input type="text" value="Email">
+            <input type="text" :value="form.name" v-model="form.name" required>
+            <input type="text" :value="form.phone" v-model="form.phone" required>
+            <input type="email" :value="form.email" v-model="form.email" required>
             <input type="submit" value="¡Contáctanos!">
           </div>
         </form>
@@ -131,19 +131,19 @@
     </section>
     <section id="S4" class="bg-dark_blue">
       <div id="contador" class="d-flex justify-content-around">
-        <div class="bg-white text-center p-5 border-rounded flex-1">
+        <div class="contador__item item--dias bg-white text-center p-5 border-rounded flex-1">
           <h2>30</h2>
           <h6 class="text-dark_blue">Días</h6>
         </div>
-        <div class="bg-white text-center p-5 border-rounded flex-1">
+        <div class="contador__item item--horas bg-white text-center p-5 border-rounded flex-1">
           <h2>10</h2>
           <h6 class="text-dark_blue">Horas</h6>
         </div>
-        <div class="bg-white text-center p-5 border-rounded flex-1">
+        <div class="contador__item item--minutos bg-white text-center p-5 border-rounded flex-1">
           <h2>20</h2>
           <h6 class="text-dark_blue">Minutos</h6>
         </div>
-        <div class="bg-white text-center p-5 border-rounded flex-1">
+        <div class="contador__item item--segundos bg-white text-center p-5 border-rounded flex-1">
           <h2>30</h2>
           <h6 class="text-dark_blue">Segundos</h6>
         </div>
@@ -151,23 +151,23 @@
     </section>
     <section id="S5">
       <h2 class="S5__titulo text-center">Testimonios</h2>
-      <div class="S5__col col--1 border-rounded p-5 text-center">
-        <picture>
-          <source srcset=" ./img/testimonio/sofia-torres.webp " type="image/webp " alt="Sofia Torres " class="rounded-circle">
-          <img src="./img/testimonio/sofia-torres.jpg " alt="Sofia Torres " class="rounded-circle">
-        </picture>
-        <h6 class="text-light_blue py-3">Sofía<br>Torres</h6>
-        <p>Siento que hice una buena compra. Durante la temporada de huracanes podré conectar los aparatos básicos en mi hogar.</p>
-      </div>
       <div class="S5__col col--2 border-rounded p-5 text-center">
         <picture>
           <source srcset=" ./img/testimonio/angelica-castillo.webp " type="image/webp " alt="Sofia Torres " class="rounded-circle">
-          <img src="./img/testimonio/angelica-castillo.jpg " alt="Sofia Torres " class="rounded-circle">
-        </picture>
-        <h6 class="text-light_blue py-3">Angélica<br>Castillo</h6>
-        <p>Me siento muy cómoda tranquila con mi Goal Yeti. Ya no me preocupa que se vaya la luz.</p>
-      </div>
-      <div class="S5__col col--3 border-rounded p-5 text-center">
+            <img src="./img/testimonio/angelica-castillo.jpg " alt="Sofia Torres " class="rounded-circle">
+          </picture>
+          <h6 class="text-light_blue py-3">Angélica<br>Castillo</h6>
+          <p>Me siento muy cómoda tranquila con mi Goal Yeti. Ya no me preocupa que se vaya la luz.</p>
+        </div>
+        <div class="S5__col col--1 border-rounded p-5 text-center">
+          <picture>
+            <source srcset=" ./img/testimonio/sofia-torres.webp " type="image/webp " alt="Sofia Torres " class="rounded-circle">
+            <img src="./img/testimonio/sofia-torres.jpg " alt="Sofia Torres " class="rounded-circle">
+          </picture>
+          <h6 class="text-light_blue py-3">Sofía<br>Torres</h6>
+          <p>Siento que hice una buena compra. Durante la temporada de huracanes podré conectar los aparatos básicos en mi hogar.</p>
+        </div>
+        <div class="S5__col col--3 border-rounded p-5 text-center">
         <picture>
           <source srcset=" ./img/testimonio/fernando-rodriguez.webp " type="image/webp " alt="Sofia Torres " class="rounded-circle ">
           <img src="./img/testimonio/fernando-rodriguez.jpg " alt="Sofia Torres " class="rounded-circle ">
@@ -180,14 +180,14 @@
       <h2 class="display-1">¡Produce tu propia energía!</h2>
     </section>
     <section id="S7">
-      <form class="S1__form contacto">
+      <form class="S1__form contacto" v-on:submit.prevent="onSubmit" @submit="getDataForm()">
         <div class="contacto__title">
           <h2 class="text-center">¡Reserva ahora!</h2>
         </div>
         <div class="contacto__input">
-          <input type="text" value="Nombre">
-          <input type="text" value="Teléfono">
-          <input type="text" value="Email">
+          <input type="text" :value="form.name" v-model="form.name">
+          <input type="text" :value="form.phone" v-model="form.phone">
+          <input type="email" :value="form.email" v-model="form.email">
           <input type="submit" value="¡Contáctanos!">
         </div>
       </form>
@@ -261,6 +261,8 @@
     </footer>
   </div>
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11 "></script> -->
+  <script src="./vendors/modernizr/modernizr-custom.js"></script>
+  <script src="./vendors/smtpjs/smtp.js"></script>
   <script src="./node_modules/vue/dist/vue.min.js "></script>
   <script src="./js/main.js "></script>
 </body>
