@@ -102,8 +102,8 @@
       <div id="tab">
         <!-- <div class="tab__header"> -->
         <ul class="tab__header--menu">
-          <li class="tab_header--item tab__item tab__item--active">Plan 1</li>
-          <li class="tab_header--item tab__item">Plan 2</li>
+          <li class="tab_header--item tab__item" :class="(ftab_active == true)? 'tab__item--active' : ''" @click="ftab_active = true">Plan 1</li>
+          <li class="tab_header--item tab__item" :class="(ftab_active == true)? '' : 'tab__item--active'" @click="ftab_active = false">Plan 2</li>
         </ul>
         <div class="tab__body">
           <div class="tab__body--col tab__body--col-1">
@@ -112,7 +112,7 @@
                 <h2><span class="text-light_blue">1</span> Batería de lítio Goal Yeti</h2>
               </li>
               <li>
-                <h2><span class="text-light_blue">2</span> Placas Solares Boulden 100</h2>
+                {{ftab_active == true? <h2><span class="text-light_blue">2</span> Placas Solares Boulden 100</h2> : <h2><span class="text-light_blue">1</span> Placa Solar Boulden 100</h2>}}
               </li>
             </ul>
             <p class="py-5">Financiamiento por 36 meses</p>

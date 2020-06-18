@@ -1,3 +1,16 @@
+Vue.component({
+  template: `
+  
+  `,
+  data(){
+    return{
+
+    }
+  },
+  methods:{
+
+  }
+})
 const app = new Vue({
   el: '#app',
   data: {
@@ -5,7 +18,15 @@ const app = new Vue({
       name: 'Nombre',
       phone: 'Teléfono',
       email: 'Email'
-    }
+    },
+    tab_data: [
+      {
+        obj_1:'1 Batería de lítio Goal Yeti',
+        obj_2: ''
+      }
+    ]
+    ,
+    ftab_active: true
   },
   methods: {
     getDataForm(){
@@ -19,14 +40,15 @@ const app = new Vue({
           </div>
         `;
       });
-      console.log(this.form.name + " | " + this.form.phone + " | " + this.form.email)
+      // console.log(this.form.name + " | " + this.form.phone + " | " + this.form.email)
+      this.sendData(this.form);
     },
     sendData(data){
       // 5e7262f5-9fef-45ea-aeab-6a2c91c84681 
       Email.send({
         SecureToken : "5e7262f5-9fef-45ea-aeab-6a2c91c84681 ",
         To : 'worldsolarpropr@gmail.com',
-        From : "Info World Solar Pro",
+        From : "info@worldsolarprous.com",
         Subject : "Nueva Reservación Yeti",
         Body : `
         <h1>Datos dados por el usuario</h1>
@@ -36,7 +58,9 @@ const app = new Vue({
         </p>
         `
     }).then(
-      message => alert(message)
+      message => console.log("Mensaje Enviado Correctamente " + message)
+    ).catch(
+      message => console.log("Error: " + message)
     );
     }
   },
