@@ -87,10 +87,10 @@ header {
 /* =========== */
 
 @media (max-width: 1199.98px) {
-  #menu {
-    display: none;
-  }
   /* #menu {
+    display: none;
+  } */
+  #menu {
     grid-template-columns: 1fr 1fr auto;
     grid-template-areas: "logo burger " "anclas anclas";
   }
@@ -110,5 +110,5 @@ header {
     border-radius: 5px;
     margin: 0.2rem;
     align-self: center;
-  } */
+  }
 }

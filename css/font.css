@@ -34,26 +34,31 @@ label {
 }
 
 .display-1 {
+  display: flex;
   font-size: calc(3.5rem + 2vw);
   font-weight: 800;
 }
 
 .display-2 {
+  display: flex;
   font-size: calc(3.3rem + 2vw);
   font-weight: 800;
 }
 
 .display-3 {
+  display: flex;
   font-size: calc(3rem + 2vw);
   font-weight: 800;
 }
 
 .display-4 {
+  display: flex;
   font-size: calc(2.8rem + 2vw);
   font-weight: 800;
 }
 
 .display-5 {
+  display: flex;
   font-size: calc(2.6rem + 2vw);
   font-weight: 800;
 }
