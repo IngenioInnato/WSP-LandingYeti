@@ -109,10 +109,11 @@
           <div class="tab__body--col tab__body--col-1">
             <ul class="tab__check">
               <li>
-                <h2><span class="text-light_blue">1</span> Batería de lítio Goal Yeti</h2>
+                <h2><span class="text-light_blue">1</span> Batería de lítio Goal Zero Yeti</h2>
               </li>
               <li>
-                {{ftab_active == true? <h2><span class="text-light_blue">2</span> Placas Solares Boulden 100</h2> : <h2><span class="text-light_blue">1</span> Placa Solar Boulden 100</h2>}}
+                <h2 v-if="ftab_active"><span class="text-light_blue">2</span> Placas Solares Boulden 100</h2>
+                <h2 v-if="!ftab_active"><span class="text-light_blue">1</span> Placa Solar Boulden 100</h2>
               </li>
             </ul>
             <p class="py-5">Financiamiento por 36 meses</p>
@@ -123,13 +124,14 @@
               <source srcset="./img/panel-yeti.webp" type="image/webp" class="img-fluid" alt="Panel y Yeti">
               <img src="./img/panel-yeti.jpg" alt="Panel y Yeti" class="img-fluid">
             </picture>
-            <h2 class="h1">$92.61</h2>
+            <h2 v-if="ftab_active" class="h1">$92.61</h2>
+            <h2 v-if="!ftab_active" class="h1">$57.44</h2>
             <h6 class="text-dark_blue">Mensuales</h6>
           </div>
         </div>
       </div>
     </section>
-    <section id="S4" class="bg-dark_blue">
+    <!-- <section id="S4" class="bg-dark_blue">
       <div id="contador" class="d-flex justify-content-around">
         <div class="contador__item item--dias bg-white text-center p-5 border-rounded flex-1">
           <h2>30</h2>
@@ -148,26 +150,26 @@
           <h6 class="text-dark_blue">Segundos</h6>
         </div>
       </div>
-    </section>
+    </section> -->
     <section id="S5">
       <h2 class="S5__titulo text-center">Testimonios</h2>
       <div class="S5__col col--2 border-rounded p-5 text-center">
         <picture>
           <source srcset=" ./img/testimonio/angelica-castillo.webp " type="image/webp " alt="Sofia Torres " class="rounded-circle">
-            <img src="./img/testimonio/angelica-castillo.jpg " alt="Sofia Torres " class="rounded-circle">
-          </picture>
-          <h6 class="text-light_blue py-3">Angélica<br>Castillo</h6>
-          <p>Me siento muy cómoda tranquila con mi Goal Yeti. Ya no me preocupa que se vaya la luz.</p>
-        </div>
-        <div class="S5__col col--1 border-rounded p-5 text-center">
-          <picture>
-            <source srcset=" ./img/testimonio/sofia-torres.webp " type="image/webp " alt="Sofia Torres " class="rounded-circle">
-            <img src="./img/testimonio/sofia-torres.jpg " alt="Sofia Torres " class="rounded-circle">
-          </picture>
-          <h6 class="text-light_blue py-3">Sofía<br>Torres</h6>
-          <p>Siento que hice una buena compra. Durante la temporada de huracanes podré conectar los aparatos básicos en mi hogar.</p>
-        </div>
-        <div class="S5__col col--3 border-rounded p-5 text-center">
+          <img src="./img/testimonio/angelica-castillo.jpg " alt="Sofia Torres " class="rounded-circle">
+        </picture>
+        <h6 class="text-light_blue py-3">Angélica<br>Castillo</h6>
+        <p>Me siento muy cómoda tranquila con mi Goal Yeti. Ya no me preocupa que se vaya la luz.</p>
+      </div>
+      <div class="S5__col col--1 border-rounded p-5 text-center">
+        <picture>
+          <source srcset=" ./img/testimonio/sofia-torres.webp " type="image/webp " alt="Sofia Torres " class="rounded-circle">
+          <img src="./img/testimonio/sofia-torres.jpg " alt="Sofia Torres " class="rounded-circle">
+        </picture>
+        <h6 class="text-light_blue py-3">Sofía<br>Torres</h6>
+        <p>Siento que hice una buena compra. Durante la temporada de huracanes podré conectar los aparatos básicos en mi hogar.</p>
+      </div>
+      <div class="S5__col col--3 border-rounded p-5 text-center">
         <picture>
           <source srcset=" ./img/testimonio/fernando-rodriguez.webp " type="image/webp " alt="Sofia Torres " class="rounded-circle ">
           <img src="./img/testimonio/fernando-rodriguez.jpg " alt="Sofia Torres " class="rounded-circle ">
@@ -180,14 +182,14 @@
       <h2 class="display-1">¡Produce tu propia energía!</h2>
     </section>
     <section id="S7">
-      <form class="S1__form contacto" v-on:submit.prevent="onSubmit" @submit="getDataForm()">
+      <form class="S1__form contacto" v-on:submit.prevent @submit="getDataForm()">
         <div class="contacto__title">
           <h2 class="text-center">¡Reserva ahora!</h2>
         </div>
         <div class="contacto__input">
-          <input type="text" :value="form.name" v-model="form.name">
-          <input type="text" :value="form.phone" v-model="form.phone">
-          <input type="email" :value="form.email" v-model="form.email">
+          <input type="text" :value="form.name" v-model="form.name" required>
+          <input type="text" :value="form.phone" v-model="form.phone" required>
+          <input type="email" :value="form.email" v-model="form.email" required>
           <input type="submit" value="¡Contáctanos!">
         </div>
       </form>
