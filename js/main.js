@@ -1,16 +1,16 @@
-Vue.component({
-  template: `
-  
-  `,
-  data() {
-    return {
+// Vue.component({
+//   template: `
 
-    }
-  },
-  methods: {
+//   `,
+//   data() {
+//     return {
 
-  }
-})
+//     }
+//   },
+//   methods: {
+
+//   }
+// })
 const app = new Vue({
   el: '#app',
   data: {
@@ -19,7 +19,8 @@ const app = new Vue({
       phone: 'Teléfono',
       email: 'Email'
     },
-    ftab_active: true
+    ftab_active: true,
+    burger_active: false
   },
   methods: {
     getDataForm() {
@@ -55,7 +56,11 @@ const app = new Vue({
       ).catch(
         message => console.log("Error: " + message)
       );
+    },
+    burgerDisplay() {
+      this.burger_active = !this.burger_active;
+      var menuAnchors = document.querySelector(".menu__anchor>ul");
+      this.burger_active ? menuAnchors.style.display = 'flex' : menuAnchors.style.display = 'none';
     }
   },
-  computed: {}
 })

@@ -80,7 +80,7 @@
           </ul>
         </div>
         <div class="menu__burger" id="mobile-burger">
-          <div class="burger border-rounded p-3">
+          <div class="burger" v-model="burger_active" @click="burgerDisplay()">
             <span></span>
             <span></span>
             <span></span>
@@ -246,7 +246,7 @@
     <aside>
       <div id="ws"></div>
     </aside>
-    <footer id="footer ">
+    <footer id="footer">
       <div class="footer__copy ">
         World Solar Pro LLC.
         <script>
