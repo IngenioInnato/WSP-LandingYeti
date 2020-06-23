@@ -1,17 +1,45 @@
-// Vue.component({
-//   template: `
-
-//   `,
-//   data() {
-//     return {
-
-//     }
-//   },
-//   methods: {
-
-//   }
-// })
-const app = new Vue({
+Vue.component('contdown', {
+  template: `
+  <h1>{{remainSeconds}}</h1>
+  `,
+  props: ['deadline', 'simpleCountDown', 'finalMessage'],
+  data() {
+    return {
+      deadline: new Date(this.deadline),
+      now: new Date().now,
+      simpleCountDown: this.simpleCountDown,
+      currentTime: false,
+      lastDate: false,
+      finalMessage: ''
+    }
+  },
+  computed: {
+    remainTime() {
+      return (new Date(this.deadline) - this.now + 1000) / 1000;
+    },
+    remainDays() {
+      return Math.floor(this.remainTime / (3600 * 24));
+    },
+    remainHours() {
+      return ('0' + Math.floor(this.remainTime / 3600 % 24)).slice(-2);
+    },
+    remainMinutes() {
+      return ('0' + Math.floor(this.remainTime / 60 % 60)).slice(-2)
+    },
+    remainSeconds() {
+      return ('0' + Math.floor(this.remainTime % 60)).slice(-2);
+    }
+  },
+  methods: {},
+  created() { // actualizar instancia
+    // https://stackoverflow.com/questions/52836501/make-computed-vue-properties-dependent-on-current-time
+    var self = this;
+    setInterval(function() {
+      self.now = Date.now()
+    }, 1000)
+  },
+});
+var app = new Vue({
   el: '#app',
   data: {
     form: {
