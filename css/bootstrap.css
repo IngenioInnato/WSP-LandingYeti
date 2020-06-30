@@ -93,6 +93,10 @@
   display: flex;
 }
 
+.d-inline-flex {
+  display: inline-flex;
+}
+
 .d-block {
   display: block;
 }
@@ -187,6 +191,10 @@
 
 .w-100 {
   width: 100%;
+}
+
+.w-75 {
+  width: 75%;
 }
 
 .w-50 {

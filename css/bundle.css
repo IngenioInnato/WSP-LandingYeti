@@ -1,0 +1,488 @@
+/* Bootstrap */
+
+.bg-light_blue {
+  background-color: var(--light_blue)
+}
+
+.bg-dark_blue {
+  background-color: var(--dark_blue)
+}
+
+.bg-yellow {
+  background-color: var(--yellow)
+}
+
+.bg-grey {
+  background-color: var(--grey)
+}
+
+.bg-white {
+  background-color: var(--white)
+}
+
+.bg-black {
+  background-color: var(--black)
+}
+
+.text-light_blue {
+  color: var(--light_blue)
+}
+
+.text-dark_blue {
+  color: var(--dark_blue)
+}
+
+.text-yellow {
+  color: var(--yellow)
+}
+
+.text-grey {
+  color: var(--grey)
+}
+
+.text-white {
+  color: var(--white)
+}
+
+.text-black {
+  color: var(--black)
+}
+
+.text-center {
+  text-align: center
+}
+
+.text-left {
+  text-align: left
+}
+
+.text-right {
+  text-align: right
+}
+
+.text-justify {
+  text-align: justify
+}
+
+.d-grid {
+  display: grid
+}
+
+.d-flex {
+  display: flex
+}
+
+.d-inline-flex {
+  display: inline-flex
+}
+
+.d-block {
+  display: block
+}
+
+.d-none {
+  display: none
+}
+
+.justify-content-center {
+  justify-content: center
+}
+
+.justify-content-start {
+  justify-content: flex-start
+}
+
+.justify-content-end {
+  justify-content: flex-end
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly
+}
+
+.justify-content-around {
+  justify-content: space-around
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto
+}
+
+.p-5 {
+  padding: 3rem
+}
+
+.pt-4,
+.py-4 {
+  padding-top: 1.5rem
+}
+
+.pt-5,
+.py-5 {
+  padding-top: 3rem
+}
+
+.pb-5,
+.py-5 {
+  padding-bottom: 3rem
+}
+
+.pb-3,
+.py-3 {
+  padding-bottom: 1rem
+}
+
+.pt-3,
+.py-3 {
+  padding-top: 1rem
+}
+
+.mt-4,
+.my-4 {
+  margin-top: 1.5rem
+}
+
+.mt-5,
+.my-5 {
+  margin-top: 3rem
+}
+
+.mb-5,
+.my-5 {
+  margin-bottom: 3rem
+}
+
+.w-100 {
+  width: 100%
+}
+
+.w-50 {
+  width: 50%
+}
+
+.border-rounded {
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+}
+
+.rounded-circle {
+  border-radius: 50%
+}
+
+.flex-1 {
+  flex: 1;
+  margin: 0 1rem
+}
+
+
+/* Menú */
+
+header {
+  width: 100%;
+  position: fixed;
+  background-color: var(--white);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3)
+}
+
+#menu {
+  display: grid;
+  grid-template-areas: "logo anclas";
+  align-items: center;
+  gap: 3rem;
+  padding: 0 3rem
+}
+
+.menu__logo {
+  grid-area: logo
+}
+
+.menu__logo img,
+.menu__logo picture,
+.menu__logo source {
+  max-width: 150px
+}
+
+.menu__anchor {
+  grid-area: anclas
+}
+
+.menu__anchor>ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none
+}
+
+.anchor__item>a {
+  text-decoration: none;
+  color: var(--light_blue);
+  text-align: center;
+  cursor: pointer
+}
+
+.menu__burger {
+  display: none;
+  cursor: pointer;
+  grid-area: burger
+}
+
+.menu__burger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--grey);
+  margin: 5px auto;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out
+}
+
+.burger,
+.burger span {
+  display: block;
+  cursor: pointer
+}
+
+@media (max-width: 1199.98px) {
+  #menu {
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-areas: "logo burger " "anclas anclas";
+    gap: 0
+  }
+  .menu__burger {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: burger
+  }
+  .menu__anchor>ul {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+    display: none
+  }
+  .menu__anchor li {
+    width: 80%;
+    height: 30px;
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    margin: .2rem;
+    align-self: center
+  }
+}
+
+
+/* Footer */
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "copy logo rrss";
+  background-color: var(--dark_blue);
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+  padding: 0 3rem
+}
+
+.footer__copy {
+  grid-area: copy;
+  color: var(--white)
+}
+
+.footer__rrss {
+  grid-area: rrss;
+  display: flex;
+  justify-content: space-around
+}
+
+.footer__rrss img,
+.footer__rrss picture,
+.footer source {
+  width: auto;
+  max-height: 40px
+}
+
+@media (max-width: 1199.98px) {
+  footer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: rrss logo copy;
+    padding: 3rem
+  }
+}
+
+
+/* Font */
+
+.bg-light_blue {
+  background-color: var(--light_blue)
+}
+
+.bg-dark_blue {
+  background-color: var(--dark_blue)
+}
+
+.bg-yellow {
+  background-color: var(--yellow)
+}
+
+.bg-grey {
+  background-color: var(--grey)
+}
+
+.bg-white {
+  background-color: var(--white)
+}
+
+.bg-black {
+  background-color: var(--black)
+}
+
+.text-light_blue {
+  color: var(--light_blue)
+}
+
+.text-dark_blue {
+  color: var(--dark_blue)
+}
+
+.text-yellow {
+  color: var(--yellow)
+}
+
+.text-grey {
+  color: var(--grey)
+}
+
+.text-white {
+  color: var(--white)
+}
+
+.text-black {
+  color: var(--black)
+}
+
+.text-center {
+  text-align: center
+}
+
+.text-left {
+  text-align: left
+}
+
+.text-right {
+  text-align: right
+}
+
+.text-justify {
+  text-align: justify
+}
+
+.d-grid {
+  display: grid
+}
+
+.d-flex {
+  display: flex
+}
+
+.d-inline-flex {
+  display: inline-flex
+}
+
+.d-block {
+  display: block
+}
+
+.d-none {
+  display: none
+}
+
+.justify-content-center {
+  justify-content: center
+}
+
+.justify-content-start {
+  justify-content: flex-start
+}
+
+.justify-content-end {
+  justify-content: flex-end
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly
+}
+
+.justify-content-around {
+  justify-content: space-around
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto
+}
+
+.p-5 {
+  padding: 3rem
+}
+
+.pt-4,
+.py-4 {
+  padding-top: 1.5rem
+}
+
+.pt-5,
+.py-5 {
+  padding-top: 3rem
+}
+
+.pb-5,
+.py-5 {
+  padding-bottom: 3rem
+}
+
+.pb-3,
+.py-3 {
+  padding-bottom: 1rem
+}
+
+.pt-3,
+.py-3 {
+  padding-top: 1rem
+}
+
+.mt-4,
+.my-4 {
+  margin-top: 1.5rem
+}
+
+.mt-5,
+.my-5 {
+  margin-top: 3rem
+}
+
+.mb-5,
+.my-5 {
+  margin-bottom: 3rem
+}
+
+.w-100 {
+  width: 100%
+}
+
+.w-50 {
+  width: 50%
+}
+
+.border-rounded {
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+}
+
+.rounded-circle {
+  border-radius: 50%
+}
+
+.flex-1 {
+  flex: 1;
+  margin: 0 1rem
+}

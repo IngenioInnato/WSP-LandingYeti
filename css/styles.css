@@ -20,6 +20,7 @@
   font-family: 'Avenir';
   font-weight: 800;
   src: local('Avenir Bold'), local('Avenir Bold'), url('../font/avenir/bold.woff') format('woff');
+  font-display: swap;
 }
 
 :root {
@@ -53,7 +54,6 @@
   display: grid;
   gap: 3rem;
   grid-template-areas: "header" "inicio" "liberate" "planes" "contador" "testimonios" "produce" "suscribete" "conectate" "footer";
-  width: 100%;
 }
 
 
