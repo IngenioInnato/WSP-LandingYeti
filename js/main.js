@@ -134,9 +134,9 @@ let app = new Vue({
     sendData(data) {
       // 5e7262f5-9fef-45ea-aeab-6a2c91c84681 
       Email.send({
-        SecureToken: "5c274948-f319-4a3e-92f1-8ca264797838",
-        To: 'worldsolarpropr@gmail.com',
-        From: "info@web.worldsolarprous.com",
+        SecureToken: "8a9ce791-d13b-44b0-8824-258b13a28660",
+        To: 'leads@worldsolarprous.com',
+        From: "leads@worldsolarprous.com",
         Subject: "Nueva Reservación Yeti",
         Body: `
         <h1>Datos dados por el usuario</h1>
