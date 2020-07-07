@@ -109,9 +109,9 @@ let app = new Vue({
   el: '#app',
   data: {
     form: {
-      name: 'Nombre',
-      phone: 'Teléfono',
-      email: 'Email'
+      name: '',
+      phone: '',
+      email: ''
     },
     ftab_active: true,
     burger_active: false
