@@ -1,9 +1,10 @@
 Vue.component('contdown', {
   template: /*html*/ `
-    <div class="contdown pt-5" v-if="(this.remainTime > 0) && (this.simpleCountDown === 'true')">
+    <div class="contdown pt-5" v-if="(this.remainTime > 0) && (this.simpleCountDown === true) && ((this.restantMinutes - this.minutesExtensionTime) > 0 )">
       <h4>{{remainDays}}D : {{remainHours}}H : {{remainMinutes}}M : {{remainSeconds}}S</h4>
     </div>
-    <div id="contador" class="d-flex justify-content-around" v-else-if="(this.remainTime > 0) && (this.simpleCountDown === 'false')">
+
+    <div id="contador" class="d-flex justify-content-around" v-else-if="(this.remainTime > 0) && (this.simpleCountDown === 'false') && ((this.restantMinutes - this.minutesExtensionTime) > 0 )">
       <div class="contador__item item--dias bg-white text-center p-5 border-rounded flex-1">
         <h2>{{remainDays}}</h2>
         <h6 class="text-dark_blue">Días</h6>
@@ -21,20 +22,52 @@ Vue.component('contdown', {
         <h6 class="text-dark_blue">Segundos</h6>
       </div>
     </div>
+
+    <div class="justify-content-center d-flex" v-else-if="( (this.restantMinutes - parseInt(this.minutesExtensionTime)) <= 0 ) && (this.remainTime > 0)">
+      <div class="d-inline-flex p-5 text-center bg-white border-rounded">
+        <h2 class="text-dark">{{minutesExtensionMessage}}</h2>
+      </div>
+    </div>
+
     <div class="justify-content-center d-flex" v-else>
       <div class="d-inline-flex p-5 text-center bg-white border-rounded">
         <h2 class="text-dark">{{finalMessage}}</h2>
       </div>
-    <div>
+    </div>
   `,
-  props: ['deadline', 'simpleCountDown', 'finalMessage', 'minutesExtensionTime', 'extensionTimeMessage'],
+  props: {
+    'deadline': {
+      type: String,
+      required: true
+    }, 
+    'finalMessage': {
+      type: String,
+      required: true
+    }, 
+    'simpleCountDown': {
+      type: Boolean,
+      required: false,
+      default: true,
+    }, 
+    'minutesExtensionTime': {
+      type: Number,
+      required: false,
+      default: 0,
+    }, 
+    'minutesExtensionMessage': {      
+      type: String,
+      required: false,
+      default: "",  
+    }
+  },
   data() {
     // IDEA: Hacer una etensión de tiempo pero 1 hora antes en ves de 1 hora después.
     return {
       now: new Date().now,
       lastDate: false,
-      condition_1: (this.remainTime > 0) && (this.simpleCountDown === 'true'),
-      condition_2: (this.remainTime > 0) && (this.simpleCountDown === 'false')
+      // condition_1: (this.remainTime > 0) && (this.simpleCountDown === 'true') && ( (parseInt(this.minutesExtensionTime) - parseInt(this.remainMinutes)) > 0 ),
+      // condition_2: (this.remainTime > 0) && (this.simpleCountDown === 'false'),
+      // condition_3: ( (parseInt(this.minutesExtensionTime) - parseInt(this.remainMinutes)) <= 0 ) && (parseInt(this.remainMinutes) >= 0)
     }
   },
   computed: {
@@ -57,6 +90,10 @@ Vue.component('contdown', {
     remainSeconds() {
       /* Math.floor redondea, y slice(-2) selecciona 2 últimos dígitos*/
       return ('0' + Math.floor(this.remainTime % 60)).slice(-2);
+    },
+    restantMinutes(){
+      let x = new Date(this.deadline) - this.now;
+      return Math.floor((x/1000/60) << 0);
     }
   },
   methods: {},
@@ -97,9 +134,9 @@ let app = new Vue({
     sendData(data) {
       // 5e7262f5-9fef-45ea-aeab-6a2c91c84681 
       Email.send({
-        SecureToken: "5e7262f5-9fef-45ea-aeab-6a2c91c84681 ",
+        SecureToken: "5c274948-f319-4a3e-92f1-8ca264797838",
         To: 'worldsolarpropr@gmail.com',
-        From: "info@worldsolarprous.com",
+        From: "info@web.worldsolarprous.com",
         Subject: "Nueva Reservación Yeti",
         Body: `
         <h1>Datos dados por el usuario</h1>
