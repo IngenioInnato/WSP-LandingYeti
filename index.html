@@ -142,7 +142,8 @@
       </div>
     </section>
     <section id="S2">
-      <h2 class="display-1">¡Libérate de tu proveedor de energía! </h2>
+      <!-- <h2 class="display-1">¡Libérate de tu proveedor de energía! </h2> -->
+      <h2 class="display-1 text-center text-white text-shadow">¡No te quedes apagado<br>Adquiere tu Goal Yeti ya!</h2>
     </section>
     <section id="S3">
       <div id="tab">
@@ -155,11 +156,8 @@
           <div class="tab__body--col tab__body--col-1">
             <ul class="tab__check">
               <li>
-                <h2><span class="text-light_blue">1</span> Batería de lítio Goal Zero Yeti</h2>
-              </li>
-              <li>
-                <h2 v-if="ftab_active"><span class="text-light_blue">2</span> Placas Solares Boulden 100</h2>
-                <h2 v-if="!ftab_active"><span class="text-light_blue">1</span> Placa Solar Boulden 100</h2>
+                <h2  v-if="ftab_active"><span class="text-light_blue">1</span> Batería de lítio Goal Zero Yeti 1400</h2>
+                <h2 v-else><span class="text-light_blue">1</span> Batería de lítio Goal Zero Yeti 3000</h2>
               </li>
             </ul>
             <p class="py-5">Financiamiento por 36 meses</p>
@@ -170,9 +168,11 @@
               <source srcset="./img/panel-yeti.webp" type="image/webp" class="img-fluid" alt="Panel y Yeti">
               <img src="./img/panel-yeti.jpg" alt="Panel y Yeti" class="img-fluid">
             </picture>
-            <h2 v-if="ftab_active" class="h1">$92.61</h2>
-            <h2 v-if="!ftab_active" class="h1">$57.44</h2>
+            <h2 v-if="ftab_active" class="h1">$99,07</h2>
+            <h2 v-if="!ftab_active" class="h1">$166,01</h2>
             <h6 class="text-dark_blue">Mensuales</h6>
+            <small>* Precio incluye solo la batería.</small>
+            <small></small>
           </div>
         </div>
       </div>
@@ -217,9 +217,9 @@
           <h2 class="text-center">¡Reserva ahora!</h2>
         </div>
         <div class="contacto__input">
-          <input type="text" :value="form.name" v-model="form.name" required>
-          <input type="text" :value="form.phone" v-model="form.phone" required>
-          <input type="email" :value="form.email" v-model="form.email" required>
+          <input type="text" :value="form.name" v-model="form.name" placeholder="Nombre" required>
+          <input type="text" :value="form.phone" v-model="form.phone" placeholder="Teléfono" required>
+          <input type="email" :value="form.email" v-model="form.email" placeholder="Email" required>
           <input type="submit" value="¡Contáctanos!">
         </div>
       </form>

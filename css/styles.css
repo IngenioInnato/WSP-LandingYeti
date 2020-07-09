@@ -150,12 +150,11 @@ form button:hover {
 
 #S2 {
   grid-area: liberate;
-  background: url(../img/liberate.jpg) no-repeat center center / cover;
+  background: url(../img/velas.jpg) no-repeat center center / cover;
   padding: 5rem 3rem;
 }
-
 #S2 h2 {
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  text-shadow: 5px 0 15px #000;
   color: var(--white);
   text-align: center;
 }
@@ -274,3 +273,8 @@ footer {
 
 
 /* ====== */
+
+
+a:focus,button:focus,div:focus,input:focus,form:focus{
+  outline: none;
+}
